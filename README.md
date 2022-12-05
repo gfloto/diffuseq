@@ -1,31 +1,12 @@
-# <img src="img/logo.jpg" width="8%" alt="" align=center /> DiffuSeq
+# DiffuSeq
+D3M fork of DiffuSeq: https://arxiv.org/abs/2210.08933
 
-Official Codebase for [*__*DiffuSeq*__: Sequence to Sequence Text Generation With Diffusion Models*](https://arxiv.org/abs/2210.08933).
+## TODO
+Move current results into Google drive (below)  
 
-<p align = "center">
-<img src="img/diffuseq-process.png" width="95%" alt="" align=center />
-</p>
-<p align = "center">
-The diffusion process of our conditional diffusion language model DiffuSeq.
-</p>
-
-## Highlights
-- Our proposed __*DiffuSeq*__ as a conditional language model is trained end-to-end in a classifier-free manner.
-- We establish a theoretical
-connection among AR, NAR and __*DiffuSeq*__ models (refer to our original paper).
-- __*DiffuSeq*__ is a powerful model for text
-generation, matching or even surpassing competitive AR, iterative NAR,
-and large-PLMs on quality and diversity.
-
-Our study addresses promising achievements by such a new
-sequence-to-sequence learning paradigm.
-
-<p align = "center">
-<img src="img/result-1.png" width="80%" alt="" align=center />
-</p>
-<p align = "center">
-<img src="img/result-2.png" width=80%" alt="" align=center />
-</p>
+## Results
+Results from experiments can be saved here: https://drive.google.com/drive/folders/1JoeOl1dFHU-RwAknOVsay9XTvmv8kXiX?usp=sharing  
+Continuous Sheet and Presentation
 
 
 
@@ -87,17 +68,3 @@ python eval_seq2seq.py --folder ../{your-path-to-outputs} --mbr
 Note: if you want to use this evaluation script for output files from other models, please make sure the same line from these output files refers to the same piece of data. Otherwise the diversity score could be incorrect.
 
 > Update 28 Nov 2022: We prepare the checkpoint and sampling results of 10 seeds for QQP dataset in this [link](https://drive.google.com/drive/folders/1vnhJIUqPQva_x_sH2h5a0moCc1NYmEpr?usp=sharing).
-
-Welcome to discuss if you have any questions.
-
-## Citation
-Please add the citation if our paper or code helps you.
-
-```
-@article{gong2022diffuseq,
-  title={DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models},
-  author={Gong, Shansan and Li, Mukai and Feng, Jiangtao and Wu, Zhiyong and Kong, Lingpeng},
-  journal={arXiv preprint arXiv:2210.08933},
-  year={2022}
-}
-```
