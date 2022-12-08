@@ -1,13 +1,9 @@
 # DiffuSeq
 D3M fork of DiffuSeq: https://arxiv.org/abs/2210.08933
 
-## TODO
-Move current results into Google drive (below)  
-
 ## Results
-Results from experiments can be saved here: https://drive.google.com/drive/folders/1JoeOl1dFHU-RwAknOVsay9XTvmv8kXiX?usp=sharing  
-Continuous Sheet and Presentation
-
+Results from experiments can be saved here: 
+https://docs.google.com/spreadsheets/d/1VC8IwwnsZrWIhHtEYvvBCVDkBvEVStoTDy-ESfTYALw/edit#gid=1839991214
 
 
 ## Setup:
@@ -17,8 +13,9 @@ pip install -r requirements.txt
 ```
 
 ## Datasets
-Prepare datasets and put them under the `datasets` folder. Take `datasets/CommonsenseConversation/train.jsonl` as an example. We use four datasets in our paper.
+Detox dataset is small enough to be included in the ``datasets`` folder
 
+Datasets used in DiffuSeq Paper
 | Task | Datasets | Training Samples | Source | Used in __*DiffuSeq*__
 |-|-|-|-|-|
 | Open-domain Dialogue | Commonsense Conversation | 3382k | [CCM](https://github.com/thu-coai/ccm) | [download](https://drive.google.com/drive/folders/1exENF9Qc5UtXnHlNl9fvaxP3zyyH32qp?usp=sharing) |
