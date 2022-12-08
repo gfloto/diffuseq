@@ -5,13 +5,6 @@ D3M fork of DiffuSeq: https://arxiv.org/abs/2210.08933
 Results from experiments can be saved here: 
 https://docs.google.com/spreadsheets/d/1VC8IwwnsZrWIhHtEYvvBCVDkBvEVStoTDy-ESfTYALw/edit#gid=1839991214
 
-
-## Setup:
-The code is based on PyTorch and HuggingFace `transformers`.
-```bash 
-pip install -r requirements.txt 
-```
-
 ## Datasets
 Detox dataset is small enough to be included in the ``datasets`` folder
 
@@ -22,6 +15,12 @@ Datasets used in DiffuSeq Paper
 | Question Generation | Quasar-T | 117k | [OpenQA](https://github.com/thunlp/OpenQA) | [download](https://drive.google.com/drive/folders/122YK0IElSnGZbPMigXrduTVL1geB4wEW?usp=sharing) |
 | Text Simplification | Wiki-alignment | 677k | [Wiki-auto](https://github.com/chaojiang06/wiki-auto) | [download](https://drive.google.com/drive/folders/1BlWtD1UbnL_ef06Riq-gABlL0Zb50s-d?usp=sharing)|
 | Paraphrase | QQP | 144k|  [Kaggle](https://www.kaggle.com/c/quora-question-pairs) | [download](https://drive.google.com/drive/folders/1BHGCeHRZU7MQF3rsqXBIOCU2WIC3W6fb?usp=sharing) |
+
+## Setup:
+The code is based on PyTorch and HuggingFace `transformers`.
+```bash 
+pip install -r requirements.txt 
+```
 
 ## DiffuSeq Training
 ```bash
