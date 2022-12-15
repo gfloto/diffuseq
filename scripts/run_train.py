@@ -40,7 +40,7 @@ if __name__ == '__main__':
     dname = os.path.dirname(dname)
     os.chdir(dname)
 
-    folder_name = "diffusion_models/"
+    folder_name = "~/scratch/diffusion_models"
 
     if int(os.environ['LOCAL_RANK']) == 0:
         if not os.path.isdir(folder_name):

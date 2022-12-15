@@ -25,6 +25,8 @@ if __name__ == '__main__':
     os.chdir(dname)
 
     output_lst = []
+    print('add')
+    print(args.model_dir)
     for lst in glob.glob(args.model_dir):
         print(lst)
         checkpoints = sorted(glob.glob(f"{lst}/{args.pattern}*.pt"))[::-1]

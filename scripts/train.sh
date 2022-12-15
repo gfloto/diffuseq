@@ -1,15 +1,16 @@
 python -m torch.distributed.launch --nproc_per_node=1 --master_port=12233 --use_env run_train.py \
---diff_steps 100 \
+--diff_steps 2000 \
 --lr 0.0001 \
---learning_steps 10 \
---save_interval 1 \
+--learning_steps 10000 \
+--save_interval 100 \
 --seed 102 \
 --noise_schedule sqrt \
---hidden_dim 24 \
---bsz 24 \
---dataset qqp \
---data_dir datasets/qt \
+--hidden_dim 128 \
+--bsz 2048 \
+--microbatch 256 \
+--dataset detox \
+--data_dir datasets/detox \
 --vocab bert \
 --seq_len 64 \
 --schedule_sampler lossaware \
---notes test-qqp
+--notes detox
