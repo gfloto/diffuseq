@@ -2,7 +2,7 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port=12233 --use_
 --diff_steps 2000 \
 --lr 0.0001 \
 --learning_steps 10000 \
---save_interval 100 \
+--save_interval 5 \
 --seed 102 \
 --noise_schedule sqrt \
 --hidden_dim 128 \
@@ -13,4 +13,6 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port=12233 --use_
 --vocab bert \
 --seq_len 64 \
 --schedule_sampler lossaware \
---notes detox
+--notes detox \
+--resume_checkpoint /home/griffin/scratch/check_models/qqp/model000999.pt \
+--folder_name  /home/griffin/scratch/diffusion_models

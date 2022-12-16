@@ -20,6 +20,7 @@ if __name__ == '__main__':
     parser.add_argument('--learning_steps', type=int, default=40000, help='total steps of learning')
     parser.add_argument('--save_interval', type=int, default=10000, help='save step')
     parser.add_argument('--resume_checkpoint', type=str, default='none', help='path to resume checkpoint, like xxx/xxx.pt')
+    parser.add_argument('--folder_name', type=str, default='none', help='path to saving folder')
     parser.add_argument('--lr', type=float, default=1e-04, help='learning rate')
     parser.add_argument('--bsz', type=int, default=64, help='batch size')
     parser.add_argument('--microbatch', type=int, default=64, help='microbatch size')
@@ -40,11 +41,9 @@ if __name__ == '__main__':
     dname = os.path.dirname(dname)
     os.chdir(dname)
 
-    folder_name = "~/scratch/diffusion_models"
-
     if int(os.environ['LOCAL_RANK']) == 0:
-        if not os.path.isdir(folder_name):
-            os.mkdir(folder_name)
+        if not os.path.isdir(args.folder_name):
+            os.mkdir(args.folder_name)
 
     Model_FILE = f"diffuseq_{args.dataset}_h{args.hidden_dim}_lr{args.lr}" \
                 f"_t{args.diff_steps}_{args.noise_schedule}_{args.schedule_sampler}" \
@@ -52,7 +51,7 @@ if __name__ == '__main__':
     if args.notes:
         args.notes += time.strftime("%Y%m%d-%H:%M:%S")
         Model_FILE = Model_FILE + f'_{args.notes}'
-    Model_FILE = os.path.join(folder_name, Model_FILE)
+    Model_FILE = os.path.join(args.folder_name, Model_FILE)
 
     if int(os.environ['LOCAL_RANK']) == 0:
         if not os.path.isdir(Model_FILE):
