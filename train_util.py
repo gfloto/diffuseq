@@ -355,6 +355,9 @@ class TrainLoop:
                 # with bf.BlobFile(bf.join(get_blob_logdir(), filename), "wb") as f:
                 #     th.save(state_dict, f)
                 with bf.BlobFile(bf.join(self.checkpoint_path, filename), "wb") as f: # DEBUG **
+                    print('\n\n\n')
+                    print(f)
+                    sys.exit()
                     th.save(state_dict, f) # save locally
                     # pass # save empty
 

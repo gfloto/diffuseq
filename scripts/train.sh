@@ -14,5 +14,6 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port=12233 --use_
 --seq_len 64 \
 --schedule_sampler lossaware \
 --notes detox \
---resume_checkpoint /home/griffin/scratch/check_models/qqp/model000999.pt \
 --folder_name  /home/griffin/scratch/diffusion_models
+
+#--resume_checkpoint /home/griffin/scratch/check_models/qqp/model000999.pt \

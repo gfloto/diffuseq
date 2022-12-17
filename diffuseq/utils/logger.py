@@ -14,7 +14,7 @@ import tempfile
 import warnings
 from collections import defaultdict
 from contextlib import contextmanager
-import wandb
+#import wandb
 
 DEBUG = 10
 INFO = 20
@@ -369,7 +369,7 @@ class Logger(object):
         # LISA
         out = d.copy()  # Return the dict for unit testing purposes
         if int(os.environ['LOCAL_RANK']) == 0:
-            wandb.log({**d})
+            #wandb.log({**d})
             for fmt in self.output_formats:
                 if isinstance(fmt, KVWriter):
                     fmt.writekvs(d)
